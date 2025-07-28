@@ -12,7 +12,13 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "astro": "^5.12.4"
+    "@astrojs/react": "^4.3.0",
+    "@radix-ui/themes": "^3.2.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "astro": "^5.12.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
