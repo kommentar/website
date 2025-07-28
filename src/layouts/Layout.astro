@@ -1,5 +1,5 @@
 ---
-import { Theme } from "@radix-ui/themes";
+import { Container, Theme } from "@radix-ui/themes";
 ---
 
 <!doctype html>
@@ -12,8 +12,14 @@ import { Theme } from "@radix-ui/themes";
 		<title>Kommentar</title>
 	</head>
 	<body>
-	    <Theme>
-			<slot />
+	    <Theme
+			accentColor="orange"
+			grayColor="slate"
+			panelBackground="solid"
+		>
+		    <Container size="4">
+				<slot />
+			</Container>
 		</Theme>
 	</body>
 </html>
