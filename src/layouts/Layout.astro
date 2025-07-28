@@ -1,5 +1,6 @@
 ---
 import { Container, Theme } from "@radix-ui/themes";
+import { Navbar } from "../components/Navbar";
 ---
 
 <!doctype html>
@@ -13,11 +14,13 @@ import { Container, Theme } from "@radix-ui/themes";
 	</head>
 	<body>
 	    <Theme
+			appearance="dark"
 			accentColor="orange"
 			grayColor="slate"
 			panelBackground="solid"
 		>
-		    <Container size="4">
+		    <Container size="4" px={{ initial: "2", lg: "3" }} >
+				<Navbar client:idle />
 				<slot />
 			</Container>
 		</Theme>
