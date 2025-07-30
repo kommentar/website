@@ -1,8 +1,30 @@
 ---
+import { Button, Flex, Heading, Section, Text } from '@radix-ui/themes';
+import { ArrowTopRightIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
 import Layout from '../layouts/Layout.astro';
 import "@radix-ui/themes/styles.css";
-
 ---
 
 <Layout>
+    <Section minHeight="100vh" py={{ initial: "9" }}>
+        <Flex direction="column" justify="center" align="center" gap={{ initial: "5", sm: "6" }} width={{ initial: "100%" }}>
+            <Heading size={{ initial: "8", xs: "9" }} align="center" wrap="balance">
+                Lightweight<br />Comments<br />Made Simple
+            </Heading>
+            <Text size={{ initial: "3", xs: "5" }} align="center" color="gray">
+                Add functional and safe comments to your website or application with ease.<br />
+                100% open source, with a self host first approach.
+            </Text>
+            <Flex direction={{ initial: "column", sm: "row" }} gap={{ initial: "3", xs: "2" }}>
+                <Button variant="classic" size={{ initial: "3", xs: "4" }}>
+                    Start Self Hosting
+                    <ArrowTopRightIcon />
+                </Button>
+                <Button variant="soft" size={{ initial: "3", xs: "4" }}>
+                    View on GitHub
+                    <GitHubLogoIcon />
+                </Button>
+            </Flex>
+        </Flex>
+    </Section>
 </Layout>
