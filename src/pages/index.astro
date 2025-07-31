@@ -1,29 +1,166 @@
 ---
-import { Button, Flex, Heading, Section, Text } from '@radix-ui/themes';
+import { Box, Button, Card, Flex, Grid, Heading, Quote, Section, Text, Em, Strong } from '@radix-ui/themes';
 import { ArrowTopRightIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
 import Layout from '../layouts/Layout.astro';
 import "@radix-ui/themes/styles.css";
 ---
 
 <Layout>
-    <Section minHeight="100vh" py={{ initial: "9" }}>
-        <Flex direction="column" justify="center" align="center" gap={{ initial: "5", sm: "6" }} width={{ initial: "100%" }}>
+    <Section
+        py={{ initial: "9" }}
+        px={{ initial: "5" }}
+        height="100%"
+    >
+        <Flex direction="column" justify="center" align="center" gap={{ initial: "5", sm: "9" }} width={{ initial: "100%" }} height={{ initial: "100%" }}>
+            <Flex direction="column" justify="center" align="center" gap={{ initial: "2", sm: "3" }} width={{ initial: "100%" }}>
+                <Heading size={{ initial: "8", xs: "9" }} align="center" wrap="balance">
+                    Lightweight<br />Comments<br />Made Simple
+                </Heading>
+                <Text size={{ initial: "3", xs: "5" }} align="center" color="gray">
+                    Add functional and safe comments to your website or application with ease.
+                </Text>
+            </Flex>
+            <Flex direction={{ initial: "column", sm: "row" }} gap={{ initial: "3", xs: "2" }}>
+                <a href="https://docs.kommentar.dev" target="_blank" rel="noreferrer noopener">
+                    <Button variant="classic" size={{ initial: "3", xs: "4" }} style={{ cursor: "pointer" }}>
+                        Start Self Hosting
+                        <ArrowTopRightIcon />
+                    </Button>
+                </a>
+                <a href="https://github.com/kommentar/kommentar" target="_blank" rel="noreferrer noopener">
+                    <Button variant="soft" size={{ initial: "3", xs: "4" }} style={{ cursor: "pointer" }}>
+                        View on GitHub
+                        <GitHubLogoIcon />
+                    </Button>
+                </a>
+            </Flex>
+        </Flex>
+    </Section>
+
+    <Section
+        id="features"
+        py={{ initial: "9" }}
+        px={{ initial: "5" }}
+        height="25%"
+    >
+        <Flex direction="column" justify="center" align="center" gap={{ initial: "3", sm: "4" }} width={{ initial: "100%" }} height={{ initial: "100%" }}>
             <Heading size={{ initial: "8", xs: "9" }} align="center" wrap="balance">
-                Lightweight<br />Comments<br />Made Simple
+                Features
             </Heading>
             <Text size={{ initial: "3", xs: "5" }} align="center" color="gray">
-                Add functional and safe comments to your website or application with ease.<br />
-                100% open source, with a self host first approach.
+                Everything you need for a functional commenting system, without the complexity.
             </Text>
-            <Flex direction={{ initial: "column", sm: "row" }} gap={{ initial: "3", xs: "2" }}>
-                <Button variant="classic" size={{ initial: "3", xs: "4" }}>
-                    Start Self Hosting
-                    <ArrowTopRightIcon />
-                </Button>
-                <Button variant="soft" size={{ initial: "3", xs: "4" }}>
-                    View on GitHub
-                    <GitHubLogoIcon />
-                </Button>
+            <Grid columns={{ initial: "1", sm: "2" }} gap="3" width="100%" mt={{ initial: "4" }}>
+                <Box>
+                    <Card>
+                        <Flex direction="column" gap={{ initial: "2"}} p={{ initial: "3" }}>
+                            <Heading size="4" color="orange">Self Hostable</Heading>
+                            <Text>
+                                Self-hosted solution means your data stays on your servers. No third-party tracking with full control.
+                            </Text>
+                        </Flex>
+                    </Card>
+                </Box>
+                <Box>
+                    <Card>
+                        <Flex direction="column" gap={{ initial: "2"}} p={{ initial: "3" }}>
+                            <Heading size="4" color="orange">Open Source</Heading>
+                            <Text>
+                                Fully open source code means you can review everything and be sure nothing funky is going on.
+                            </Text>
+                        </Flex>
+                    </Card>
+                </Box>
+                <Box>
+                    <Card>
+                        <Flex direction="column" gap={{ initial: "2"}} p={{ initial: "3" }}>
+                            <Heading size="4" color="orange">Smart Filters</Heading>
+                            <Text>
+                                Smart profanity filters via <a href="https://www.profanity.dev" target="_blank" rel="noreferrer noopener">profanity.dev</a>
+                                to prevent toxic content. An in-house solution is in the works!
+                            </Text>
+                        </Flex>
+                    </Card>
+                </Box>
+                <Box>
+                    <Card>
+                        <Flex direction="column" gap={{ initial: "2"}} p={{ initial: "3" }}>
+                            <Heading size="4" color="orange">Unstyled Components</Heading>
+                            <Text>
+                                Components to help you get going with as less friction as possible.
+                                Not available yet, but coming soon!
+                            </Text>
+                        </Flex>
+                    </Card>
+                </Box>
+            </Grid>
+        </Flex>
+    </Section>
+
+    <Section
+        id="faq"
+        py={{ initial: "9" }}
+        px={{ initial: "5" }}
+        height="25%"
+    >
+        <Flex direction="column" justify="center" align="center" gap={{ initial: "3", sm: "4" }} width={{ initial: "100%" }} height={{ initial: "100%" }}>
+            <Heading size={{ initial: "8", xs: "9" }} align="center" wrap="balance">
+                Frequently Asked Questions (I think)
+            </Heading>
+
+            <Flex direction="column" gap="6" justify="center" width={{ initial: "100%", sm: "50%" }}>
+                <Flex direction="column" justify="start" width="100%" mt={{ initial: "6" }}>
+                    <Text color="orange"><Strong><Quote>How good is Kommentar?</Quote></Strong></Text>
+                    <Text>
+                        I built Kommentar for myseld.
+                        It gets the job done for me.
+                        The rest is for you to decide!
+                        Feel free to <a href="https://github.com/kommentar/kommentar/issues" target="_blank" rel="noreferrer noopener">request a feature on Github</a> 😁
+                    </Text>
+                </Flex>
+
+                <Flex direction="column" justify="start" width="100%">
+                    <Text color="orange"><Strong><Quote>Why did you build Kommentar?</Quote></Strong></Text>
+                    <Text>
+                        I have a personal site over at <a href="https://safwanyp.com" target="_blank" rel="noreferrer noopener">safwanyp.com</a>
+                        where I <Em>try</Em> to write stuff. The last time I made a post, someone told me they would have loved if there was a comments
+                        section. That's what motivated me to build Kommentar.
+                    </Text>
+                </Flex>
+
+                <Flex direction="column" justify="start" width="100%">
+                    <Text color="orange"><Strong><Quote>What does Kommentar mean?</Quote></Strong></Text>
+                    <Text>
+                        Kommentar is a Swedish word that means "Comments". I used that word simply because I'm trying to learn Swedish, and it sounded nice!
+                    </Text>
+                </Flex>
+
+                <Flex direction="column" justify="start" width="100%">
+                    <Text color="orange"><Strong><Quote>Why is the only option to Self-Host?</Quote></Strong></Text>
+                    <Text>
+                        Like I mentioned before, I build Kommentar for myself.
+                        I have been trying to get into self hosting everything I use regularly, which made me realize how
+                        nice it is to always have the option to self-host a particular service/application.<br /><br />
+                        On top of that, I am just one guy and don't see the need to provide a managed solution until
+                        there is an actual demand or need for it.
+                    </Text>
+                </Flex>
+
+                <Flex direction="column" justify="start" width="100%">
+                    <Text color="orange"><Strong><Quote>Will there be a managed/SaaS offering of Kommentar?</Quote></Strong></Text>
+                    <Text>
+                        For now, no. But if enough people ask for it then I will consider it!
+                    </Text>
+                </Flex>
+
+                <Flex direction="column" justify="start" width="100%">
+                    <Text color="orange"><Strong><Quote>How can I support?</Quote></Strong></Text>
+                    <Text>
+                        If you really are wondering about this, thanks a lot!
+                        The easiest way is to tell other people about Kommentar,
+                        and to drop a ★ on the <a href="https://github.com/kommentar/kommentar" target="_blank" rel="noreferrer noopener">main Kommentar repository</a>.
+                    </Text>
+                </Flex>
             </Flex>
         </Flex>
     </Section>

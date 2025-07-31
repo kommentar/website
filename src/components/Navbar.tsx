@@ -1,12 +1,4 @@
-import {
-  Badge,
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Link,
-  TabNav,
-} from "@radix-ui/themes";
+import { Badge, Box, Button, Flex, Heading, Link } from "@radix-ui/themes";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -25,18 +17,13 @@ const Navbar = () => {
   }, []);
 
   return (
-    <Flex justify="between" align="center" py="1" gapX="1">
+    <Flex justify="between" align="center" py="3" gapX="1">
       <Heading color="orange" asChild size={{ initial: "3", xs: "4", sm: "5" }}>
         <Link href="/" underline="none">
           Kommentar
         </Link>
       </Heading>
-      <TabNav.Root size={{ initial: "1", xs: "2" }}>
-        <TabNav.Link href="#">Features</TabNav.Link>
-        <TabNav.Link href="#">Documentation</TabNav.Link>
-        <TabNav.Link href="#">About</TabNav.Link>
-      </TabNav.Root>
-      <Box display={{ initial: "none", xs: "block" }}>
+      <Box display={{ initial: "block" }}>
         <Flex>
           <Button variant="soft" asChild>
             <a
