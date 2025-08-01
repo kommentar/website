@@ -1,6 +1,6 @@
 ---
 import { Box, Button, Card, Flex, Grid, Heading, Quote, Section, Text, Em, Strong } from '@radix-ui/themes';
-import { ArrowTopRightIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
+import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import Layout from '../layouts/Layout.astro';
 import "@radix-ui/themes/styles.css";
 ---
@@ -27,13 +27,12 @@ import "@radix-ui/themes/styles.css";
             </Flex>
             <Flex direction={{ initial: "column", sm: "row" }} gap={{ initial: "3", xs: "2" }}>
                 <a href="https://docs.kommentar.dev" target="_blank" rel="noreferrer noopener">
-                    <Button variant="classic" size={{ initial: "3", xs: "4" }} style={{ cursor: "pointer" }}>
-                        Start Self Hosting
-                        <ArrowTopRightIcon />
+                    <Button variant="classic" size={{ initial: "3", xs: "4" }} style={{ cursor: "pointer", width: "100%" }}>
+                        Start Self Hosting (Docs)
                     </Button>
                 </a>
                 <a href="https://github.com/kommentar/kommentar" target="_blank" rel="noreferrer noopener">
-                    <Button variant="soft" size={{ initial: "3", xs: "4" }} style={{ cursor: "pointer" }}>
+                    <Button variant="soft" size={{ initial: "3", xs: "4" }} style={{ cursor: "pointer", width: "100%" }}>
                         View on GitHub
                         <GitHubLogoIcon />
                     </Button>

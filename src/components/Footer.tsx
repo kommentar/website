@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <Box
       width="100%"
-      p="9"
+      p={{ initial: "5", sm: "9" }}
       style={{
         borderLeft: "1px solid rgba(39, 42, 45, 1)",
         borderBottom: "1px solid rgba(39, 42, 45, 1)",
@@ -22,10 +22,12 @@ const Footer = () => {
     >
       <Flex
         justify="between"
-        display={{ initial: "none", sm: "flex" }}
+        display="flex"
         width="100%"
+        direction={{ initial: "column", sm: "row" }}
+        gap={{ initial: "9", sm: "0" }}
       >
-        <Flex direction="column" gap={{ initial: "6" }}>
+        <Flex direction="column" gap={{ initial: "3", sm: "6" }}>
           <Flex direction="column" gap={{ initial: "2" }} asChild>
             <Section size={{ initial: "1" }}>
               <Heading size="8" color="orange">
@@ -57,7 +59,10 @@ const Footer = () => {
             </a>
           </Text>
         </Flex>
-        <Box width={{ initial: "300px" }} height={{ initial: "300px" }}>
+        <Box
+          width={{ initial: "75px", sm: "300px" }}
+          height={{ initial: "75px", sm: "300px" }}
+        >
           <AspectRatio ratio={1} style={{ paddingBottom: "0" }}>
             <img
               src={Logo.src}
