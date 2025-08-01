@@ -1,6 +1,7 @@
 ---
 import { Container, Theme } from "@radix-ui/themes";
 import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 ---
 
 <!doctype html>
@@ -8,7 +9,7 @@ import { Navbar } from "../components/Navbar";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Kommentar</title>
 	</head>
@@ -18,11 +19,17 @@ import { Navbar } from "../components/Navbar";
 			accentColor="orange"
 			grayColor="slate"
 			panelBackground="solid"
+			hasBackground={false}
 		>
 		    <Container size="4" px={{ initial: "2", lg: "3" }}>
 				<Navbar client:idle />
 				<slot />
 			</Container>
+            <footer>
+                <Container size="4" px={{ initial: "2", lg: "3" }}>
+                    <Footer />
+                </Container>
+            </footer>
 		</Theme>
 	</body>
 </html>

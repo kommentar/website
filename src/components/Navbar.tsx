@@ -17,7 +17,17 @@ const Navbar = () => {
   }, []);
 
   return (
-    <Flex justify="between" align="center" py="3" gapX="1">
+    <Flex
+      justify="between"
+      align="center"
+      p="3"
+      gapX="1"
+      style={{
+        borderLeft: "1px solid rgba(39, 42, 45, 1)",
+        borderBottom: "1px solid rgba(39, 42, 45, 1)",
+        borderRight: "1px solid rgba(39, 42, 45, 1)",
+      }}
+    >
       <Heading color="orange" asChild size={{ initial: "3", xs: "4", sm: "5" }}>
         <Link href="/" underline="none">
           Kommentar
