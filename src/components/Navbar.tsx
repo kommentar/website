@@ -1,20 +1,7 @@
 import { Badge, Box, Button, Flex, Heading, Link } from "@radix-ui/themes";
-import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [starCount, setStarCount] = useState(null);
-
-  useEffect(() => {
-    fetch("/api/github-stars")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setStarCount(data.stars);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch stars:", err);
-      });
-  }, []);
+  const starCount = import.meta.env.PUBLIC_GITHUB_START_COUNT;
 
   return (
     <Flex
